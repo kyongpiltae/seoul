@@ -19,4 +19,3 @@ mnist = datasets.load_digits()
 
 #%% 
 from sklearn.metrics import classification_report
-Classification_report()
