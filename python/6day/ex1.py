@@ -74,4 +74,6 @@ graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
 graph.write_pdf('iris.pdf')
 
 # %%
-arr1 = np.arrange(24).reshape(3,3,3,-1)
+arr1 = np.arange(27).reshape(3,3,3)
+
+# %%
