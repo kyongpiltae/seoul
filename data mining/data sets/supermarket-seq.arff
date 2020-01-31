@@ -1,0 +1,22 @@
+@relation market_sequence
+@attribute personID {1,2,3,4,5,6,7}
+@attribute item {MILK, EGGS, COFFEE, SUGAR, DIAPERS}
+@data
+1, MILK
+1, EGGS
+1, COFFEE
+2, MILK
+2, EGGS,DIAPERS
+3, MILK
+3, DIAPERS
+3, COFFEE
+4, EGGS
+4, COFFEE
+4, SUGAR
+5, EGGS,DIAPERS
+5, COFFEE
+6, COFFEE
+6, SUGAR
+6, DIAPERS
+7, DIAPERS
+7, COFFEE,SUGAR
