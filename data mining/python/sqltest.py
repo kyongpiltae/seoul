@@ -21,7 +21,6 @@ pd.read_sql("Show tables",con)
 
 # %%
 pd.read_sql("SELECT * From employees",con)
-
 # %%
 
 sql = """
@@ -39,5 +38,33 @@ group by orderDate
 Having SUM(priceEach) > 1500; """
 pd.read_sql(sql,con)
 
+
+# %%
+sql = """
+select t1.orderNumber,orderDate , SUM(priceEach)
+FROM orders t1, orderdetails t2
+where t1.orderNumber = t2.orderNumber
+group by t1.orderNumber, orderDate
+Having SUM(priceEach) > 1500; """
+pd.read_sql(sql,con)
+
+
+# %%
+# %%
+
+sql = """
+select t1.orderNumber, t2.priceEach
+FROM orders t1, orderdetails t2
+where t1.orderNumber = t2.orderNumber and priceEach >=100 ; """
+pd.read_sql(sql,con)
+
+# %%
+
+
+sql = """
+select t1.orderNumber, t2.priceEach
+FROM orders t1, orderdetails t2
+where t1.orderNumber = t2.orderNumber and priceEach >=100 ; """
+pd.read_sql(sql,con)
 
 # %%
