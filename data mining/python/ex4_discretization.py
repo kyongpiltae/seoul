@@ -40,3 +40,10 @@ col_i = 3
 plt.hist(X[:,col_i:col_i+1], bins=discretizer.bin_edges_[col_i],linewidth = 1.2 , edgecolor = "black")
 plt.suptitle(df.columns[col_i])
 plt.show()
+
+
+# %%
+clf = MultinomialNB()
+cv = KFold(n_splits=10,shuffle=True, random_state=0)
+
+scores = cross_val_score( )
