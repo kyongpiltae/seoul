@@ -13,10 +13,11 @@ df = pd.read_csv('glass.csv')
 X = df.values[:,:-1]
 Y = df.values[:,-1]
 N= len(X)
-
+#%% 
 normalizer = MinMaxScaler(X)
 X_norm = normalizer.fit_transform(X)
 
 # %%
 print(X_norm)
+print(nomalizer.scale)
 # %%
