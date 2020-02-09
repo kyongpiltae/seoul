@@ -65,3 +65,13 @@ for item in sorted:
     print(item)
 
 # %%
+
+from sklearn.cluster import DBSCAN
+model = DBSCAN(min_samples=2,eps=np.sqrt(5))
+
+y_pred = model.fit_predict(X)
+
+plt.figure(1,figsize=(5,5))
+plt.scatter(X[:,0],X[:,1],s=30,c=y_pred,cmap='tab20')
+
+# %%
